@@ -49,10 +49,10 @@ Access token            ===> credentials['Access_token']<br />
 Access token secret     ===> credentials['Access_key']<br />
 
 Terminal,
-[Terminal](https://github.com/IIplutocrat45II/TweetSpyder/blob/master/images/sc1.png)
+![Terminal](https://github.com/IIplutocrat45II/TweetSpyder/blob/master/images/sc1.png)
 
 Dataframe(csv file),
-[Dataframe](https://github.com/IIplutocrat45II/TweetSpyder/blob/master/images/sc2.png)
+![Dataframe](https://github.com/IIplutocrat45II/TweetSpyder/blob/master/images/sc2.png)
 
 
 
