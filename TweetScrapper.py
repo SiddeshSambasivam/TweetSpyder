@@ -83,16 +83,32 @@ def read():
     print("\n\t\t\tDataBase of dataframes")
     with open('database.txt', 'r') as file:
         l = file.readline()
-        print(l)
     s = str(l).split(':')
-    for i in range(0,len(s)):
-        print(i,'.',s[i],'\n')
+    for i in range(0,len(s)-1):
+        print(i+1,'.',s[i],'\n')
+    choice = int(input('\nCHOICE: '))
+    file_name = s[choice-1]
+    loc = 'Data_Base/{}.csv'.format(file_name)
+    data_read = pd.read_csv(loc)
+    print('\n',data_read)
+
 
     
     #data = pd.read_csv('./tweets.csv')
     #time.sleep(2)
     #print('\n\nPrinting the dataframe...\n')
     #print(data)
+def cleanslate():
+    with open('database.txt', 'r') as file:
+        l = file.readline()
+    s = str(l).split(':')
+    for i in range(0,len(s)-1):
+        data = s[i]
+        loc = 'Data_Base/{}.csv'.format(data)
+        os.remove(loc)
+    os.remove('database.txt')
+
+        
 
 
 def main():    
@@ -128,7 +144,14 @@ def main():
         
         elif(choice == 3):
             exit()
-
+        elif(choice == 83457066):
+            os.system('clear')
+            print('\t\t\t\t\n\n\nCLEAN SLATE PROTOCOL')
+            c = str(input('Execute (y/n):'))
+            if(c=='y'):
+                cleanslate()
+            else:
+                exit()
         time.sleep(1)
         retry=str(input('\n\nRetry (y/n): '))
     
